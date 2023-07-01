@@ -1,28 +1,169 @@
-#falling-leaves {
-    position: relative;
-    width: 100%;
-    height: 100%;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  background-image: url("background.webp");
+  background-size: cover;
+  filter: saturate(1.5);
+}
+
+.leaves-container {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.leaf {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  animation: falling 8s ease-in-out infinite;
+}
+
+.leaf:nth-child(1) {
+  left: 5%;
+  top: -5%;
+  animation-delay: 0.5s;
+}
+
+.leaf:nth-child(2) {
+  left: 25%;
+  top: -10%;
+  animation-delay: 2s;
+}
+
+.leaf:nth-child(3) {
+  left: 45%;
+  top: -15%;
+  animation-delay: 3.5s;
+}
+
+.leaf:nth-child(4) {
+  left: 65%;
+  top: -20%;
+  animation-delay: 1s;
+}
+
+.leaf:nth-child(5) {
+  left: 85%;
+  top: -25%;
+  animation-delay: 2.5s;
+}
+
+.leaf:nth-child(6) {
+  left: 95%;
+  top: -15%;
+  animation-delay: 2.5s;
+}
+
+.leaf:nth-child(7) {
+  left: 55%;
+  top: -15%;
+  animation-delay: 1.5s;
+}
+
+.leaf:nth-child(8) {
+  left: 20%;
+  top: -15%;
+  animation-delay: 1.0s;
+}
+
+@keyframes falling {
+  0% {
+    transform: translateY(0%);
   }
-  
-  .leaf {
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    background-color: green;
-    border-radius: 50%;
-    opacity: 0.5;
-    animation: falling 5s infinite;
+
+  100% {
+    transform: translateY(100vh);
   }
-  
-  @keyframes falling {
-    0% {
-      top: 0;
-      left: 0;
-    }
-  
-    100% {
-      bottom: 0;
-      left: 0;
-    }
+}
+
+/* Estilos para el formulario */
+
+.login-sqr {
+  height: 300px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+  background-color: rgba(255, 255, 255, 0.26);
+  backdrop-filter: blur(10px);
+  z-index: 1;
+  border-radius: 20px;
+}
+
+.login-box {
+  position: relative;
+  top: -70%;
+  left: 38%;
+  max-width: 400px;
+  width: 100%;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.26);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-bottom: 2px;
+  font-weight: bold;
+  font-family: inherit;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 90%;
+  height: 45px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  font-family: 'Poppins', sans-serif;
+  outline: none;
+}
+
+input[type="submit"] {
+  background-color: #FFA15F;
+  font-family: 'Poppins', sans-serif;
+  width: 90%;
+  height: 45px;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-  
+
+  .leaves-container {
+    height: auto;
+  }
+
+  .login-box {
+    top: 0;
+    left: 0;
+    transform: none;
+  }
+}
