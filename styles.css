@@ -8,9 +8,11 @@
 
 body {
   height: 100vh;
-  width: 100%;
+  width: 100vw;
   background-image: url("background.webp");
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   font-family: 'Roboto', sans-serif;
   filter: contrast(120%);
 }
@@ -117,6 +119,8 @@ input[type="password"] {
   height: 45px;
   padding: 10px;
   border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+
   border-radius: 5px;
   margin-bottom: 15px;
   font-family: inherit;
