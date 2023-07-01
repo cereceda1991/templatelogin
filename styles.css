@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 * {
   box-sizing: border-box;
@@ -10,7 +10,8 @@ body {
   height: 100vh;
   background-image: url("background.webp");
   background-size: cover;
-  filter: saturate(1.5);
+  font-family: 'Roboto', sans-serif;
+  filter: contrast(120%);
 }
 
 .leaves-container {
@@ -93,7 +94,7 @@ body {
   padding-bottom: 20px;
   padding-left: 40px;
   padding-right: 40px;
-  background-color: rgba(255, 255, 255, 0.26);
+  background-color: #fff3;
   backdrop-filter: blur(10px);
   z-index: 1;
   border-radius: 20px;
@@ -107,7 +108,7 @@ body {
   width: 100%;
   padding: 20px;
   border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.26);
+  background-color: #fff4;
   backdrop-filter: blur(10px);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   z-index: 1;
@@ -129,13 +130,13 @@ input[type="password"] {
   border: 1px solid #ccc;
   border-radius: 5px;
   margin-bottom: 15px;
-  font-family: 'Poppins', sans-serif;
+  font-family: inherit;
   outline: none;
 }
 
 input[type="submit"] {
   background-color: #FFA15F;
-  font-family: 'Poppins', sans-serif;
+  font-family: inherit;
   width: 90%;
   height: 45px;
   color: white;
@@ -147,6 +148,7 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
   background-color: #45a049;
+  font-family: inherit;
 }
 
 /* Estilos para dispositivos móviles */
